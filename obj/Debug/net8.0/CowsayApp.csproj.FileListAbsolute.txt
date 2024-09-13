@@ -1,0 +1,14 @@
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\bin\Debug\net8.0\CowsayApp.exe
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\bin\Debug\net8.0\CowsayApp.deps.json
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\bin\Debug\net8.0\CowsayApp.runtimeconfig.json
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\bin\Debug\net8.0\CowsayApp.dll
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\bin\Debug\net8.0\CowsayApp.pdb
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\CowsayApp.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\CowsayApp.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\CowsayApp.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\CowsayApp.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\CowsayApp.dll
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\refint\CowsayApp.dll
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\CowsayApp.pdb
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\CowsayApp.genruntimeconfig.cache
+\\wsl.localhost\Ubuntu\home\matt\CowsayApp\obj\Debug\net8.0\ref\CowsayApp.dll
