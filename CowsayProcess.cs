@@ -1,47 +1,33 @@
+using System;
 using System.Diagnostics;
 
-/// <summary>
-/// Cowsay is a program that generates ASCII pictures of a cow with a message.
-/// </summary>
-class Cowsay
+public class CowsayProcess
 {
-    /// <summary>
-    /// Generates a cow with a message.
-    /// </summary>
-    ///
-    /// <param name="message">The message to display.</param>
-    /// <returns>The ASCII picture of a cow with the message.</returns>
-    ///
-    /// <exception cref="Exception">If cowsay fails to generate the cow.</exception>
-    public static string Say(string message)
+    public string RunCowsay(string inputText)
     {
-        ProcessStartInfo startInfo = new()
+        // Setup the process to run cowsay directly inside WSL (Linux environment)
+        Process process = new Process
         {
-            FileName = "/usr/games/cowsay",
-            RedirectStandardError = true,
-            RedirectStandardInput = true,
-            RedirectStandardOutput = true,
-            UseShellExecute = false,
+            StartInfo = new ProcessStartInfo
+            {
+                FileName = "/usr/games/cowsay", // Directly call the cowsay command
+                Arguments = inputText, // Pass the input text as an argument
+                RedirectStandardOutput = true, // Redirect standard output to capture it
+                RedirectStandardError = true,  // Redirect standard error
+                UseShellExecute = false, // Do not use the system shell to start the process
+                CreateNoWindow = true // Do not create a window for the process
+            }
         };
 
-        using Process process = new()
-        {
-            StartInfo = startInfo,
-        };
+        // Start the process
+        process.Start();
 
-        Process.Start("/usr/games/cowsay", "dfs");
-        process.StandardInput.WriteLine(message);
-        process.StandardInput.Close();
+        // Read the output from cowsay
+        string result = process.StandardOutput.ReadToEnd();
 
-        string output = process.StandardOutput.ReadToEnd();
+        // Ensure the process has exited before returning
         process.WaitForExit();
 
-        if (process.ExitCode != 0)
-        {
-            string error = process.StandardError.ReadToEnd();
-            throw new Exception(error);
-        }
-
-        return output;
+        return result;
     }
 }

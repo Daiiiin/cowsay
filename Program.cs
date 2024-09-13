@@ -1,24 +1,28 @@
-﻿﻿using System.ComponentModel;
+﻿using System;
 
-try
+class Program
 {
-    Console.Write("-> Tell me what you want to say: ");
-    string? message = Console.ReadLine();
-
-    if (string.IsNullOrEmpty(message))
+    static void Main(string[] args)
     {
-        Console.WriteLine("error: message cannot be empty.");
-        return;
-    }
+        // Ask the user for input
+        Console.WriteLine("Tell me what you want to say:");
+        string? userInput = Console.ReadLine();
 
-    string response = Cowsay.Say(message);
-    Console.WriteLine(response);
-}
-catch (Win32Exception)
-{
-    Console.WriteLine("error: cowsay is not installed on this system.");
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"error: {ex.Message}");
+        // Check if user input is valid
+        if (string.IsNullOrWhiteSpace(userInput))
+        {
+            Console.WriteLine("Input cannot be empty!");
+            return;
+        }
+
+        // Create an instance of CowsayProcess
+        CowsayProcess cowsay = new CowsayProcess();
+
+        // Run cowsay with the user's input
+        string output = cowsay.RunCowsay(userInput);
+
+        // Display the output from cowsay
+        Console.WriteLine("Cowsay says:");
+        Console.WriteLine(output);
+    }
 }

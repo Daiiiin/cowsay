@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wGvqQ7suKow=",
+  "dgSpecHash": "p2uKd1J32hs=",
   "success": true,
-  "projectFilePath": "\\\\wsl.localhost\\Ubuntu\\home\\matt\\CowsayApp\\CowsayApp.csproj",
+  "projectFilePath": "/home/matt/CowsayApp/CowsayApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
